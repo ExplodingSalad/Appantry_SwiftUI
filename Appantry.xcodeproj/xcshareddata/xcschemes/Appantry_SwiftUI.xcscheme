@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3D17E624276E9972001D45C1"
                BuildableName = "Appantry.app"
-               BlueprintName = "Appantry_SwiftUI"
-               ReferencedContainer = "container:Appantry_SwiftUI.xcodeproj">
+               BlueprintName = "Appantry"
+               ReferencedContainer = "container:Appantry.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,8 +46,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D17E624276E9972001D45C1"
             BuildableName = "Appantry.app"
-            BlueprintName = "Appantry_SwiftUI"
-            ReferencedContainer = "container:Appantry_SwiftUI.xcodeproj">
+            BlueprintName = "Appantry"
+            ReferencedContainer = "container:Appantry.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D17E624276E9972001D45C1"
             BuildableName = "Appantry.app"
-            BlueprintName = "Appantry_SwiftUI"
-            ReferencedContainer = "container:Appantry_SwiftUI.xcodeproj">
+            BlueprintName = "Appantry"
+            ReferencedContainer = "container:Appantry.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
