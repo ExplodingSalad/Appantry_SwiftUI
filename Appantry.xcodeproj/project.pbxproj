@@ -18,10 +18,11 @@
 		3D17E642276F444E001D45C1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17E641276F444E001D45C1 /* HomeView.swift */; };
 		3D17E645276F4B5E001D45C1 /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17E644276F4B5E001D45C1 /* HomeCardView.swift */; };
 		3D17E64A276FC287001D45C1 /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17E649276FC287001D45C1 /* ProductData.swift */; };
+		3DFC792A276FDA7700562380 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC7929276FDA7700562380 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D17E625276E9972001D45C1 /* Appantry_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appantry_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D17E625276E9972001D45C1 /* Appantry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appantry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D17E628276E9972001D45C1 /* Appantry_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appantry_SwiftUIApp.swift; sourceTree = "<group>"; };
 		3D17E62A276E9972001D45C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3D17E62C276E9973001D45C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,6 +34,7 @@
 		3D17E641276F444E001D45C1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3D17E644276F4B5E001D45C1 /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
 		3D17E649276FC287001D45C1 /* ProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
+		3DFC7929276FDA7700562380 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,7 @@
 		3D17E626276E9972001D45C1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3D17E625276E9972001D45C1 /* Appantry_SwiftUI.app */,
+				3D17E625276E9972001D45C1 /* Appantry.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +89,7 @@
 			children = (
 				3D17E62A276E9972001D45C1 /* ContentView.swift */,
 				3D17E643276F44E5001D45C1 /* HomeView */,
+				3DFC7928276FDA6A00562380 /* Assets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,12 +131,20 @@
 			path = ProductsListView;
 			sourceTree = "<group>";
 		};
+		3DFC7928276FDA6A00562380 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3DFC7929276FDA7700562380 /* Colors.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3D17E624276E9972001D45C1 /* Appantry_SwiftUI */ = {
+		3D17E624276E9972001D45C1 /* Appantry */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D17E633276E9973001D45C1 /* Build configuration list for PBXNativeTarget "Appantry_SwiftUI" */;
+			buildConfigurationList = 3D17E633276E9973001D45C1 /* Build configuration list for PBXNativeTarget "Appantry" */;
 			buildPhases = (
 				3D17E621276E9972001D45C1 /* Sources */,
 				3D17E622276E9972001D45C1 /* Frameworks */,
@@ -143,9 +154,9 @@
 			);
 			dependencies = (
 			);
-			name = Appantry_SwiftUI;
+			name = Appantry;
 			productName = Appantry_SwiftUI;
-			productReference = 3D17E625276E9972001D45C1 /* Appantry_SwiftUI.app */;
+			productReference = 3D17E625276E9972001D45C1 /* Appantry.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -163,7 +174,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3D17E620276E9972001D45C1 /* Build configuration list for PBXProject "Appantry_SwiftUI" */;
+			buildConfigurationList = 3D17E620276E9972001D45C1 /* Build configuration list for PBXProject "Appantry" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -176,7 +187,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3D17E624276E9972001D45C1 /* Appantry_SwiftUI */,
+				3D17E624276E9972001D45C1 /* Appantry */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D17E62B276E9972001D45C1 /* ContentView.swift in Sources */,
+				3DFC792A276FDA7700562380 /* Colors.swift in Sources */,
 				3D17E642276F444E001D45C1 /* HomeView.swift in Sources */,
 				3D17E64A276FC287001D45C1 /* ProductData.swift in Sources */,
 				3D17E63D276E9EA7001D45C1 /* GroceriesListCardView.swift in Sources */,
@@ -264,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -320,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = Appantry;
@@ -347,14 +359,14 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Zenyera.Appantry-SwiftUI";
-				PRODUCT_NAME = Appantry_SwiftUI;
+				PRODUCT_NAME = Appantry;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -377,14 +389,14 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Zenyera.Appantry-SwiftUI";
-				PRODUCT_NAME = Appantry_SwiftUI;
+				PRODUCT_NAME = Appantry;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -394,7 +406,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3D17E620276E9972001D45C1 /* Build configuration list for PBXProject "Appantry_SwiftUI" */ = {
+		3D17E620276E9972001D45C1 /* Build configuration list for PBXProject "Appantry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D17E631276E9973001D45C1 /* Debug */,
@@ -403,7 +415,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D17E633276E9973001D45C1 /* Build configuration list for PBXNativeTarget "Appantry_SwiftUI" */ = {
+		3D17E633276E9973001D45C1 /* Build configuration list for PBXNativeTarget "Appantry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D17E634276E9973001D45C1 /* Debug */,

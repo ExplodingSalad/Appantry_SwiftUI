@@ -42,7 +42,7 @@ struct ContentView: View {
         }
         .edgesIgnoringSafeArea(.top)
         .onAppear() {
-            UITabBar.appearance().backgroundColor = .white
+            UITabBar.appearance().backgroundColor = UIColor(Color.cust.col4)
         }
     }
     
