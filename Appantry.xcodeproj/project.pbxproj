@@ -19,6 +19,10 @@
 		3D17E645276F4B5E001D45C1 /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17E644276F4B5E001D45C1 /* HomeCardView.swift */; };
 		3D17E64A276FC287001D45C1 /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17E649276FC287001D45C1 /* ProductData.swift */; };
 		3DFC792A276FDA7700562380 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC7929276FDA7700562380 /* Colors.swift */; };
+		3DFC792C27725D0300562380 /* ProductsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC792B27725D0300562380 /* ProductsMainView.swift */; };
+		3DFC792E27725D1300562380 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC792D27725D1300562380 /* ProductCardView.swift */; };
+		3DFC793027725D1F00562380 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC792F27725D1F00562380 /* ProductDetailView.swift */; };
+		3DFC793427726B4400562380 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DFC793627726B4400562380 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,12 @@
 		3D17E644276F4B5E001D45C1 /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
 		3D17E649276FC287001D45C1 /* ProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
 		3DFC7929276FDA7700562380 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		3DFC792B27725D0300562380 /* ProductsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsMainView.swift; sourceTree = "<group>"; };
+		3DFC792D27725D1300562380 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
+		3DFC792F27725D1F00562380 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		3DFC793527726B4400562380 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3DFC793727726B6D00562380 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3DFC793827726B7900562380 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +100,7 @@
 				3D17E62A276E9972001D45C1 /* ContentView.swift */,
 				3D17E643276F44E5001D45C1 /* HomeView */,
 				3DFC7928276FDA6A00562380 /* Assets */,
+				3DFC793327726B2D00562380 /* Resources */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -127,6 +138,9 @@
 		3D17E646276F673E001D45C1 /* ProductsListView */ = {
 			isa = PBXGroup;
 			children = (
+				3DFC792B27725D0300562380 /* ProductsMainView.swift */,
+				3DFC792D27725D1300562380 /* ProductCardView.swift */,
+				3DFC792F27725D1F00562380 /* ProductDetailView.swift */,
 			);
 			path = ProductsListView;
 			sourceTree = "<group>";
@@ -137,6 +151,14 @@
 				3DFC7929276FDA7700562380 /* Colors.swift */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		3DFC793327726B2D00562380 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3DFC793627726B4400562380 /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +203,8 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				es,
 			);
 			mainGroup = 3D17E61C276E9972001D45C1;
 			productRefGroup = 3D17E626276E9972001D45C1 /* Products */;
@@ -198,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D17E630276E9973001D45C1 /* Preview Assets.xcassets in Resources */,
+				3DFC793427726B4400562380 /* Localizable.strings in Resources */,
 				3D17E62D276E9973001D45C1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,8 +240,11 @@
 				3D17E64A276FC287001D45C1 /* ProductData.swift in Sources */,
 				3D17E63D276E9EA7001D45C1 /* GroceriesListCardView.swift in Sources */,
 				3D17E645276F4B5E001D45C1 /* HomeCardView.swift in Sources */,
+				3DFC792E27725D1300562380 /* ProductCardView.swift in Sources */,
 				3D17E63B276E9AEE001D45C1 /* GroceriesListData.swift in Sources */,
 				3D17E638276E9A9F001D45C1 /* GroceriesListsMainView.swift in Sources */,
+				3DFC792C27725D0300562380 /* ProductsMainView.swift in Sources */,
+				3DFC793027725D1F00562380 /* ProductDetailView.swift in Sources */,
 				3D17E629276E9972001D45C1 /* Appantry_SwiftUIApp.swift in Sources */,
 				3D17E63F276EA031001D45C1 /* GroceriesListsDetailView.swift in Sources */,
 			);
@@ -224,11 +252,25 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		3DFC793627726B4400562380 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DFC793527726B4400562380 /* en */,
+				3DFC793727726B6D00562380 /* de */,
+				3DFC793827726B7900562380 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		3D17E631276E9973001D45C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -291,6 +333,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

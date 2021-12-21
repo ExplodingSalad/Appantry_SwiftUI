@@ -52,16 +52,3 @@ struct ContentView: View {
         }
     }
 }
-
-// not working somehow
-extension UITabBarController {
-    override open func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let standardAppearance = UITabBarAppearance()
-        
-        standardAppearance.backgroundColor = .red
-        
-        tabBar.standardAppearance = standardAppearance
-    }
-}

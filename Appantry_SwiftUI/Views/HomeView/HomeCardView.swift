@@ -24,8 +24,7 @@ struct HomeCardView: View {
                     .bold()
                 
             }.padding()
-        }
-        
+        }        
     }
 }
 

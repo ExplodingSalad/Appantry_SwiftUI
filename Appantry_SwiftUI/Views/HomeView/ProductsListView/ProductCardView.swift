@@ -1,39 +1,39 @@
 //
-//  GroceriesListCardView.swift
-//  Appantry_SwiftUI
+//  ProductCardView.swift
+//  Appantry
 //
-//  Created by Jan Locher on 18.12.21.
+//  Created by Jan Locher on 21.12.21.
 //
 
 import SwiftUI
 
-struct GroceriesListCardView: View {
+struct ProductCardView: View {
     
-    let groceriesListData: GroceriesListData
+    let productData: ProductData
     
     var body: some View {
         ZStack {
             VStack(alignment: .leading, spacing: 5) {
-                Text(groceriesListData.listName)
+                Text(productData.productName)
                     .font(.title)
                     .bold()
                 HStack {
-                    Image(systemName: "bag")
-                    Text("\(groceriesListData.products.count)")
+                    Image(systemName: "building")
+                    Text("\(productData.productVendor)")
                         .font(.body)
                     
                     Spacer()
                         .frame(width: 30, alignment: .leading)
                     
-                    Image(systemName: "checkmark.square")
-                    Text("2")
+                    Image(systemName: "list.bullet.below.rectangle")
+                    Text("\(productData.productCategory)")
                         .font(.body)
                     
                     Spacer()
                         .frame(width: 30, alignment: .leading)
                     
-                    Image(systemName: "xmark.square")
-                    Text("0")
+                    Image(systemName: "shippingbox")
+                    Text("\(productData.productStoredQuantity)")
                         .font(.body)
                     
                 }
@@ -41,16 +41,15 @@ struct GroceriesListCardView: View {
             .padding()
         }
         .frame(alignment: .leading)
-//        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-        
     }
 }
 
-struct GroceriesListCardView_Previews: PreviewProvider {
-    static var testGroceriesListData = GroceriesListData.sampleData[0]
+struct ProductCardView_Previews: PreviewProvider {
+    
+    static var testProductData = ProductData.sampleData[0]
+    
     static var previews: some View {
-        
-        GroceriesListCardView(groceriesListData: testGroceriesListData)
+        ProductCardView(productData: testProductData)
             .previewLayout(.fixed(width: 400, height: 90))
     }
 }
