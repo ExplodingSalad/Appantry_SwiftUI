@@ -22,3 +22,13 @@ struct ProductData: Identifiable {
         self.productStoredQuantity = productStoredQuantity
     }
 }
+
+//MARK: - ProductData Sample Data
+
+extension ProductData {
+    static let sampleData: [ProductData] =
+    [
+        ProductData(productName: "Product1", productCategory: "Dairy", productVendor: "Lidl", productStoredQuantity: 2),
+        ProductData(productName: "Product2", productCategory: "Dairy", productVendor: "Lidl", productStoredQuantity: 3)
+    ]
+}

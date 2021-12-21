@@ -16,11 +16,16 @@ struct HomeView: View {
                 }
             }
             Section {
-                NavigationLink(destination: GroceriesListsMainView(dataModels: GroceriesListData.sampleData)) {
+                NavigationLink(destination: ProductsMainView(productData: ProductData.sampleData)) {
                     HomeCardView(cardName: "Products", imageName: "productsImg")
                 }
             }
+        }.onAppear() {
+            UITableView.appearance().backgroundColor = UIColor(Color.cust.col1)
+            //            UITableViewCell.appearance().backgroundColor = UIColor(Color.cust.col4)
         }
+        
+        
     }
 }
 
@@ -28,5 +33,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environment(\.locale, .init(identifier: "de"))
     }
 }
