@@ -9,27 +9,55 @@ import SwiftUI
 
 struct GroceriesListsMainView: View {
     
-    let dataModels: [GroceriesListData]
+    @State private var searchText = ""
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(
+        entity: GroceriesListEntity.entity(),
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \GroceriesListEntity.listName, ascending: true)
+        ]
+    ) var fetchedGroceriesLists: FetchedResults<GroceriesListEntity>
     
     var body: some View {
         List {
-            ForEach(dataModels) { dataModel in
-                NavigationLink(destination: GroceriesListsDetailView(groceriesListsData: dataModel)) {
-                    GroceriesListCardView(groceriesListData: dataModel)
+            ForEach(fetchedGroceriesLists) { (fetchedList:GroceriesListEntity) in
+                NavigationLink(destination: GroceriesListsDetailView(listItem: fetchedList)) {
+                    GroceriesListCardView(listItem: fetchedList)
                 }
             }
+            .onDelete(perform: removeGroceriesList)
         }
+        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
         .navigationBarTitle("Groceries Lists")
         .toolbar {
-                    Button(action: {}) {
-                        Image(systemName: "plus")
-                    }
-                }
+            Button(action: addList) {
+                Image(systemName: "plus")
+            }
+        }
+    }
+    
+    func addList() {
+        // TODO: Move logic
+        let test = GroceriesListEntity(context: managedObjectContext)
+        test.listName = "another list3"
+        test.id = UUID()
+        
+        PersistenceController.shared.save()
+    }
+    
+    func removeGroceriesList(at offsets: IndexSet) {
+        for index in offsets {
+            let groceriesList = fetchedGroceriesLists[index]
+            managedObjectContext.delete(groceriesList)
+        }
+        PersistenceController.shared.save()
     }
 }
 
 struct GroceriesListsMainView_Previews: PreviewProvider {
     static var previews: some View {
-        GroceriesListsMainView(dataModels: GroceriesListData.sampleData)
+        let context = PersistenceController().container.viewContext
+        GroceriesListsMainView()
+            .environment(\.managedObjectContext, context)
     }
 }

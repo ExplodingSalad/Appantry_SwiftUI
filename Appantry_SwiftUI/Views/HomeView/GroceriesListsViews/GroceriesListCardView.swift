@@ -9,48 +9,47 @@ import SwiftUI
 
 struct GroceriesListCardView: View {
     
-    let groceriesListData: GroceriesListData
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @ObservedObject var listItem: GroceriesListEntity
     
     var body: some View {
         ZStack {
             VStack(alignment: .leading, spacing: 5) {
-                Text(groceriesListData.listName)
+                Text(listItem.listName ?? "Unknown")
                     .font(.title)
                     .bold()
                 HStack {
-                    Image(systemName: "bag")
-                    Text("\(groceriesListData.products.count)")
+                    Image(systemName: K.ListIcons.productsNr)
+                    Text(String(listItem.products?.count ?? 0))
                         .font(.body)
                     
                     Spacer()
                         .frame(width: 30, alignment: .leading)
-                    
-                    Image(systemName: "checkmark.square")
+                    //TODO: Add products in/out store logic
+                    Image(systemName: K.ListIcons.productsInStore)
                     Text("2")
                         .font(.body)
                     
                     Spacer()
                         .frame(width: 30, alignment: .leading)
                     
-                    Image(systemName: "xmark.square")
+                    Image(systemName: K.ListIcons.productsOutStore)
                     Text("0")
                         .font(.body)
-                    
                 }
             }
             .padding()
         }
-        .frame(alignment: .leading)
-//        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-        
+        .frame(alignment: .leading)        
     }
 }
 
 struct GroceriesListCardView_Previews: PreviewProvider {
-    static var testGroceriesListData = GroceriesListData.sampleData[0]
+    
     static var previews: some View {
-        
-        GroceriesListCardView(groceriesListData: testGroceriesListData)
+        let context = PersistenceController().container.viewContext
+        GroceriesListCardView(listItem: GroceriesListEntity(context: context))
+            .environment(\.managedObjectContext, context)
             .previewLayout(.fixed(width: 400, height: 90))
     }
 }

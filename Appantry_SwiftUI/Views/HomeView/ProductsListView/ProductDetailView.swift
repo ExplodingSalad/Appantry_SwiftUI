@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct ProductDetailView: View {
+    
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @ObservedObject var productItem: ProductEntity
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            Section(header: Text("List Information")) {
+                Label(productItem.productName ?? "Unknown", systemImage: "pencil")
+                    .font(.headline)
+            }
+        }
     }
 }
 
 struct ProductDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductDetailView()
+        Text("Hello")
     }
 }
