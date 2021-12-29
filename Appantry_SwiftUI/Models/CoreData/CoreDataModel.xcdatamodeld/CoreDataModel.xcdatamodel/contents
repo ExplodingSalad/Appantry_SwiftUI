@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="GroceriesListEntity" representedClassName="GroceriesListEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="listName" attributeType="String"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ProductEntity" inverseName="parentGroceriesList" inverseEntity="ProductEntity"/>
+    </entity>
+    <entity name="ProductEntity" representedClassName="ProductEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="productCategory" optional="YES" attributeType="String"/>
+        <attribute name="productName" attributeType="String"/>
+        <attribute name="productStoredQuantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="productVendor" optional="YES" attributeType="String"/>
+        <relationship name="parentGroceriesList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GroceriesListEntity" inverseName="products" inverseEntity="GroceriesListEntity"/>
+    </entity>
+    <elements>
+        <element name="GroceriesListEntity" positionX="-641.6018676757812" positionY="-50.6846923828125" width="128" height="88"/>
+        <element name="ProductEntity" positionX="-182.792236328125" positionY="-131.3734741210938" width="128" height="133"/>
+    </elements>
+</model>

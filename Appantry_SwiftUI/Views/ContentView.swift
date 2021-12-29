@@ -8,6 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @Environment(\.managedObjectContext) var managedObjectContext
+    let navBarAppearance = UINavigationBarAppearance()
+    //App-wide Navbar appearance
+    init() {
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.backgroundColor = UIColor(Color.cust.col1)
+        
+        UINavigationBar.appearance().standardAppearance = navBarAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+        UITableView.appearance().backgroundColor = UIColor(Color.cust.col1)
+        
+        navBarAppearance.shadowColor = .clear
+        
+    }
+    
     var body: some View {
         TabView {
             NavigationView {
@@ -15,7 +31,7 @@ struct ContentView: View {
                     .navigationBarTitle("Home")
             }
             .tabItem {
-                Image(systemName: "house.circle.fill")
+                Image(systemName: K.TabViewIcons.home)
                 Text("Home")
             }
             .navigationViewStyle(.stack)
@@ -25,7 +41,7 @@ struct ContentView: View {
                     .navigationBarTitle("Add Product")
             }
             .tabItem {
-                Image(systemName: "plus.circle")
+                Image(systemName: K.TabViewIcons.add)
                 Text("Add Product")
             }
             .navigationViewStyle(.stack)
@@ -35,7 +51,7 @@ struct ContentView: View {
                     .navigationBarTitle("Settings")
             }
             .tabItem {
-                Image(systemName: "gear.circle.fill")
+                Image(systemName: K.TabViewIcons.settings)
                 Text("Settings")
             }
             .navigationViewStyle(.stack)

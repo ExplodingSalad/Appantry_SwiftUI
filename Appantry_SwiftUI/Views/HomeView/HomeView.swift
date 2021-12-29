@@ -8,24 +8,25 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     var body: some View {
         List {
-            Section {
-                NavigationLink(destination: GroceriesListsMainView(dataModels: GroceriesListData.sampleData)) {
+            Section() {
+                NavigationLink(destination: GroceriesListsMainView()) {
                     HomeCardView(cardName: "Groceries Lists", imageName: "listsImg")
                 }
             }
             Section {
-                NavigationLink(destination: ProductsMainView(productData: ProductData.sampleData)) {
+                NavigationLink(destination: ProductsMainView()) {
                     HomeCardView(cardName: "Products", imageName: "productsImg")
                 }
             }
-        }.onAppear() {
-            UITableView.appearance().backgroundColor = UIColor(Color.cust.col1)
-            //            UITableViewCell.appearance().backgroundColor = UIColor(Color.cust.col4)
+            Section {
+                NavigationLink(destination: ProductsMainView()) {
+                    HomeCardView(cardName: "Recipes", imageName: "productsImg")
+                }
+            }
         }
-        
-        
     }
 }
 
