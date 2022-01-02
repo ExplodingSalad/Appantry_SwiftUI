@@ -10,6 +10,8 @@ import SwiftUI
 struct AddProductPopover: View {
     
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @State private var showAlert = false
     @State private var number: Int = 0
     @State var newProductName: String = ""
     @State var newProductVendor: String = ""
@@ -20,52 +22,65 @@ struct AddProductPopover: View {
         NavigationView {
             List {
                 HStack {
-                    Label("Name", systemImage: K.ProductIcons.name)
+                    Label("", systemImage: K.ProductIcons.name)
                         .foregroundColor(.black)
                     Spacer().frame(maxWidth: .infinity)
                     TextField("Add Name", text: $newProductName)
+                        .keyboardType(.default)
                 }
                 HStack {
-                    Label("Vendor", systemImage: K.ProductIcons.vendor)
+                    Label("", systemImage: K.ProductIcons.vendor)
                         .foregroundColor(.black)
                     Spacer().frame(maxWidth: .infinity)
                     TextField("Add Vendor", text: $newProductVendor)
+                        .keyboardType(.default)
                 }
                 HStack {
-                    Label("Category", systemImage: K.ProductIcons.category)
+                    Label("", systemImage: K.ProductIcons.category)
                         .foregroundColor(.black)
                     Spacer().frame(maxWidth: .infinity)
                     TextField("Add Category", text: $newProductCategory)
+                        .keyboardType(.default)
                 }
                 VStack(alignment: .leading) {
                     HStack {
-                        Label("Quantity", systemImage: K.ProductIcons.quantity)
+                        Label("", systemImage: K.ProductIcons.quantity)
                             .foregroundColor(.black)
                         Spacer().frame(maxWidth: .infinity)
                         Text("\(number)")
-//                        TextField("\(number)", text: Binding(
-//                            get: { String(newProductStoredQuantity) },
-//                            set: { newProductStoredQuantity = Int($0) ?? 0}))
-//                            .keyboardType(.numberPad)
                     }
-                    //TODO: Picker is laggy as shit on real devices & often crashes the app
-                    Picker("", selection: $number) {
-                        ForEach(0..<1000) {
-                            Text("\($0)")
-                        }
-                    }.pickerStyle(.wheel)
-                    
+                    HStack {
+                        Spacer().frame(maxWidth: .infinity)
+                        Stepper("",value: $number, in: 0...100)
+                    }
                 }
-                
-                
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
-                        // TODO: Save logic
-                        presentationMode.wrappedValue.dismiss()
+                        
+                        // if name is not nil saves the new product to CoreData
+                        if !newProductName.isEmpty {
+                            let newProduct = ProductEntity(context: managedObjectContext)
+                            newProduct.productName = newProductName
+                            newProduct.id = UUID()
+                            newProduct.productVendor = newProductVendor
+                            newProduct.productCategory = newProductCategory
+                            newProduct.productStoredQuantity = Int32(number)
+                            
+                            PersistenceController.shared.save()
+                            presentationMode.wrappedValue.dismiss()
+                        } else {
+                            showAlert = true
+                        }
                     }
+                    .alert(isPresented: $showAlert) {
+                            Alert(
+                                title: Text("Product Name cannot be empty!"),
+                                message: Text("Please specify a name for your new Product.")
+                            )
+                        }
                 }
                 ToolbarItem(placement: .principal) {
                     Text("Add Product")
