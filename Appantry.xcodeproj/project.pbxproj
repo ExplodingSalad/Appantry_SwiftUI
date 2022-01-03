@@ -20,9 +20,13 @@
 		3D17E64A276FC287001D45C1 /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17E649276FC287001D45C1 /* ProductData.swift */; };
 		3D79F36327731FEB009EACD0 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F36127731FEB009EACD0 /* CoreDataModel.xcdatamodeld */; };
 		3D79F3662773202D009EACD0 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F3652773202D009EACD0 /* PersistenceController.swift */; };
-		3D79F36927734259009EACD0 /* GroceriesListMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F36827734259009EACD0 /* GroceriesListMainViewModel.swift */; };
 		3D79F36D2775315F009EACD0 /* AddProductPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F36C2775315F009EACD0 /* AddProductPopover.swift */; };
 		3D79F36F277CD653009EACD0 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F36E277CD653009EACD0 /* K.swift */; };
+		3D79F37227823F00009EACD0 /* AddProductPopoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F37127823F00009EACD0 /* AddProductPopoverViewModel.swift */; };
+		3D79F37427824450009EACD0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F37327824450009EACD0 /* Model.swift */; };
+		3D79F37627824816009EACD0 /* ProductsMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F37527824816009EACD0 /* ProductsMainViewModel.swift */; };
+		3D79F37A27835B39009EACD0 /* AddListPopoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F37927835B39009EACD0 /* AddListPopoverViewModel.swift */; };
+		3D79F37C27835B56009EACD0 /* AddListPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F37B27835B56009EACD0 /* AddListPopoverView.swift */; };
 		3DFC792A276FDA7700562380 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC7929276FDA7700562380 /* Colors.swift */; };
 		3DFC792C27725D0300562380 /* ProductsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC792B27725D0300562380 /* ProductsMainView.swift */; };
 		3DFC792E27725D1300562380 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC792D27725D1300562380 /* ProductCardView.swift */; };
@@ -45,9 +49,13 @@
 		3D17E649276FC287001D45C1 /* ProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
 		3D79F36227731FEB009EACD0 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		3D79F3652773202D009EACD0 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
-		3D79F36827734259009EACD0 /* GroceriesListMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesListMainViewModel.swift; sourceTree = "<group>"; };
 		3D79F36C2775315F009EACD0 /* AddProductPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductPopover.swift; sourceTree = "<group>"; };
 		3D79F36E277CD653009EACD0 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		3D79F37127823F00009EACD0 /* AddProductPopoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductPopoverViewModel.swift; sourceTree = "<group>"; };
+		3D79F37327824450009EACD0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		3D79F37527824816009EACD0 /* ProductsMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsMainViewModel.swift; sourceTree = "<group>"; };
+		3D79F37927835B39009EACD0 /* AddListPopoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListPopoverViewModel.swift; sourceTree = "<group>"; };
+		3D79F37B27835B56009EACD0 /* AddListPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListPopoverView.swift; sourceTree = "<group>"; };
 		3DFC7929276FDA7700562380 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3DFC792B27725D0300562380 /* ProductsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsMainView.swift; sourceTree = "<group>"; };
 		3DFC792D27725D1300562380 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
@@ -111,7 +119,6 @@
 			children = (
 				3D17E62A276E9972001D45C1 /* ContentView.swift */,
 				3D17E643276F44E5001D45C1 /* HomeView */,
-				3DFC7928276FDA6A00562380 /* Assets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -122,6 +129,7 @@
 				3D79F3642773201B009EACD0 /* CoreData */,
 				3D17E63A276E9AEE001D45C1 /* GroceriesListData.swift */,
 				3D17E649276FC287001D45C1 /* ProductData.swift */,
+				3D79F37327824450009EACD0 /* Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -132,6 +140,7 @@
 				3D17E637276E9A9F001D45C1 /* GroceriesListsMainView.swift */,
 				3D17E63C276E9EA7001D45C1 /* GroceriesListCardView.swift */,
 				3D17E63E276EA031001D45C1 /* GroceriesListsDetailView.swift */,
+				3D79F37B27835B56009EACD0 /* AddListPopoverView.swift */,
 			);
 			path = GroceriesListsViews;
 			sourceTree = "<group>";
@@ -170,23 +179,34 @@
 		3D79F36727734216009EACD0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				3D79F36827734259009EACD0 /* GroceriesListMainViewModel.swift */,
+				3D79F37827835A3C009EACD0 /* GroceriesListsViewModels */,
+				3D79F37727835A29009EACD0 /* ProductsListViewModels */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		3DFC7928276FDA6A00562380 /* Assets */ = {
+		3D79F37727835A29009EACD0 /* ProductsListViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				3DFC7929276FDA7700562380 /* Colors.swift */,
-				3D79F36E277CD653009EACD0 /* K.swift */,
+				3D79F37127823F00009EACD0 /* AddProductPopoverViewModel.swift */,
+				3D79F37527824816009EACD0 /* ProductsMainViewModel.swift */,
 			);
-			path = Assets;
+			path = ProductsListViewModels;
+			sourceTree = "<group>";
+		};
+		3D79F37827835A3C009EACD0 /* GroceriesListsViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3D79F37927835B39009EACD0 /* AddListPopoverViewModel.swift */,
+			);
+			path = GroceriesListsViewModels;
 			sourceTree = "<group>";
 		};
 		3DFC793327726B2D00562380 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3DFC7929276FDA7700562380 /* Colors.swift */,
+				3D79F36E277CD653009EACD0 /* K.swift */,
 				3DFC793627726B4400562380 /* Localizable.strings */,
 			);
 			path = Resources;
@@ -265,13 +285,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D79F37C27835B56009EACD0 /* AddListPopoverView.swift in Sources */,
 				3D17E62B276E9972001D45C1 /* ContentView.swift in Sources */,
 				3DFC792A276FDA7700562380 /* Colors.swift in Sources */,
+				3D79F37227823F00009EACD0 /* AddProductPopoverViewModel.swift in Sources */,
 				3D17E642276F444E001D45C1 /* HomeView.swift in Sources */,
 				3D17E64A276FC287001D45C1 /* ProductData.swift in Sources */,
 				3D17E63D276E9EA7001D45C1 /* GroceriesListCardView.swift in Sources */,
 				3D17E645276F4B5E001D45C1 /* HomeCardView.swift in Sources */,
-				3D79F36927734259009EACD0 /* GroceriesListMainViewModel.swift in Sources */,
 				3DFC792E27725D1300562380 /* ProductCardView.swift in Sources */,
 				3D17E63B276E9AEE001D45C1 /* GroceriesListData.swift in Sources */,
 				3D79F36F277CD653009EACD0 /* K.swift in Sources */,
@@ -279,7 +300,10 @@
 				3D79F3662773202D009EACD0 /* PersistenceController.swift in Sources */,
 				3DFC792C27725D0300562380 /* ProductsMainView.swift in Sources */,
 				3D79F36D2775315F009EACD0 /* AddProductPopover.swift in Sources */,
+				3D79F37427824450009EACD0 /* Model.swift in Sources */,
+				3D79F37627824816009EACD0 /* ProductsMainViewModel.swift in Sources */,
 				3DFC793027725D1F00562380 /* ProductDetailView.swift in Sources */,
+				3D79F37A27835B39009EACD0 /* AddListPopoverViewModel.swift in Sources */,
 				3D17E629276E9972001D45C1 /* Appantry_SwiftUIApp.swift in Sources */,
 				3D79F36327731FEB009EACD0 /* CoreDataModel.xcdatamodeld in Sources */,
 				3D17E63F276EA031001D45C1 /* GroceriesListsDetailView.swift in Sources */,

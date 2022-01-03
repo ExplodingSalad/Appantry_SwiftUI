@@ -19,7 +19,7 @@ struct ProductsMainView: View {
         ]
     ) var fetchedProducts: FetchedResults<ProductEntity>
     
-    //    let productData: [ProductData]
+    @StateObject var prodMainViewModel = ProductsMainViewModel()
     
     var body: some View {
         List {
@@ -42,20 +42,9 @@ struct ProductsMainView: View {
             }
         }
         .popover(isPresented: $isPopoverPresented) {
+            
             AddProductPopover()
         }
-    }
-    
-    func addProduct() {
-        // TODO: Move logic
-        let newProduct = ProductEntity(context: managedObjectContext)
-        newProduct.productName = "another product35"
-        newProduct.id = UUID()
-        newProduct.productVendor = "Lidl"
-        newProduct.productCategory = "Dairy"
-        newProduct.productStoredQuantity = 3
-        
-        PersistenceController.shared.save()
     }
     
     func removeProduct(at offsets: IndexSet) {
