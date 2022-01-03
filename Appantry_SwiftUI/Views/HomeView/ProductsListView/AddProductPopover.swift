@@ -55,6 +55,7 @@ struct AddProductPopover: View {
                     Button("Save") {
                         prodPopViewModel.saveProduct()
                         
+                        //TODO: fix alert dismiss bug
                         // if saving fails due to an empty name, the dismissal is still called before the error is displayed
                         presentationMode.wrappedValue.dismiss()
                     }

@@ -15,7 +15,7 @@ struct GroceriesListsDetailView: View {
     var body: some View {
         List {
             Section(header: Text("List Information")) {
-                Label("", systemImage: K.ListIcons.name)
+                Label(listItem.wrappedListName, systemImage: K.ListIcons.name)
                     .foregroundColor(.black)
                 Label("", systemImage: K.ListIcons.productsInStore)
                     .foregroundColor(.black)
@@ -23,6 +23,15 @@ struct GroceriesListsDetailView: View {
                     .foregroundColor(.black)
                 Label("", systemImage: K.ListIcons.productsNr)
                     .foregroundColor(.black)
+            }
+            Section(header: Text("Products on this List")) {
+                ForEach(listItem.productArray) {
+                    (fetchedProducts:ProductEntity) in
+                    NavigationLink(destination: ProductDetailView(productItem: fetchedProducts)) {
+                        ProductCardView(productItem: fetchedProducts)
+                        
+                    }
+                }
             }
         }
     }

@@ -27,6 +27,10 @@
 		3D79F37627824816009EACD0 /* ProductsMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F37527824816009EACD0 /* ProductsMainViewModel.swift */; };
 		3D79F37A27835B39009EACD0 /* AddListPopoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F37927835B39009EACD0 /* AddListPopoverViewModel.swift */; };
 		3D79F37C27835B56009EACD0 /* AddListPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F37B27835B56009EACD0 /* AddListPopoverView.swift */; };
+		3D79F38127836076009EACD0 /* ProductEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F37D27836076009EACD0 /* ProductEntity+CoreDataClass.swift */; };
+		3D79F38227836076009EACD0 /* ProductEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F37E27836076009EACD0 /* ProductEntity+CoreDataProperties.swift */; };
+		3D79F38327836076009EACD0 /* GroceriesListEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F37F27836076009EACD0 /* GroceriesListEntity+CoreDataClass.swift */; };
+		3D79F38427836076009EACD0 /* GroceriesListEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F38027836076009EACD0 /* GroceriesListEntity+CoreDataProperties.swift */; };
 		3DFC792A276FDA7700562380 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC7929276FDA7700562380 /* Colors.swift */; };
 		3DFC792C27725D0300562380 /* ProductsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC792B27725D0300562380 /* ProductsMainView.swift */; };
 		3DFC792E27725D1300562380 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC792D27725D1300562380 /* ProductCardView.swift */; };
@@ -56,6 +60,10 @@
 		3D79F37527824816009EACD0 /* ProductsMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsMainViewModel.swift; sourceTree = "<group>"; };
 		3D79F37927835B39009EACD0 /* AddListPopoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListPopoverViewModel.swift; sourceTree = "<group>"; };
 		3D79F37B27835B56009EACD0 /* AddListPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListPopoverView.swift; sourceTree = "<group>"; };
+		3D79F37D27836076009EACD0 /* ProductEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ProductEntity+CoreDataClass.swift"; path = "Appantry_SwiftUI/Models/CoreData/ProductEntity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		3D79F37E27836076009EACD0 /* ProductEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ProductEntity+CoreDataProperties.swift"; path = "Appantry_SwiftUI/Models/CoreData/ProductEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		3D79F37F27836076009EACD0 /* GroceriesListEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "GroceriesListEntity+CoreDataClass.swift"; path = "Appantry_SwiftUI/Models/CoreData/GroceriesListEntity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		3D79F38027836076009EACD0 /* GroceriesListEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "GroceriesListEntity+CoreDataProperties.swift"; path = "Appantry_SwiftUI/Models/CoreData/GroceriesListEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		3DFC7929276FDA7700562380 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		3DFC792B27725D0300562380 /* ProductsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsMainView.swift; sourceTree = "<group>"; };
 		3DFC792D27725D1300562380 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
@@ -170,6 +178,10 @@
 		3D79F3642773201B009EACD0 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				3D79F37D27836076009EACD0 /* ProductEntity+CoreDataClass.swift */,
+				3D79F37E27836076009EACD0 /* ProductEntity+CoreDataProperties.swift */,
+				3D79F37F27836076009EACD0 /* GroceriesListEntity+CoreDataClass.swift */,
+				3D79F38027836076009EACD0 /* GroceriesListEntity+CoreDataProperties.swift */,
 				3D79F36127731FEB009EACD0 /* CoreDataModel.xcdatamodeld */,
 				3D79F3652773202D009EACD0 /* PersistenceController.swift */,
 			);
@@ -287,10 +299,13 @@
 			files = (
 				3D79F37C27835B56009EACD0 /* AddListPopoverView.swift in Sources */,
 				3D17E62B276E9972001D45C1 /* ContentView.swift in Sources */,
+				3D79F38227836076009EACD0 /* ProductEntity+CoreDataProperties.swift in Sources */,
 				3DFC792A276FDA7700562380 /* Colors.swift in Sources */,
 				3D79F37227823F00009EACD0 /* AddProductPopoverViewModel.swift in Sources */,
 				3D17E642276F444E001D45C1 /* HomeView.swift in Sources */,
+				3D79F38427836076009EACD0 /* GroceriesListEntity+CoreDataProperties.swift in Sources */,
 				3D17E64A276FC287001D45C1 /* ProductData.swift in Sources */,
+				3D79F38327836076009EACD0 /* GroceriesListEntity+CoreDataClass.swift in Sources */,
 				3D17E63D276E9EA7001D45C1 /* GroceriesListCardView.swift in Sources */,
 				3D17E645276F4B5E001D45C1 /* HomeCardView.swift in Sources */,
 				3DFC792E27725D1300562380 /* ProductCardView.swift in Sources */,
@@ -305,6 +320,7 @@
 				3DFC793027725D1F00562380 /* ProductDetailView.swift in Sources */,
 				3D79F37A27835B39009EACD0 /* AddListPopoverViewModel.swift in Sources */,
 				3D17E629276E9972001D45C1 /* Appantry_SwiftUIApp.swift in Sources */,
+				3D79F38127836076009EACD0 /* ProductEntity+CoreDataClass.swift in Sources */,
 				3D79F36327731FEB009EACD0 /* CoreDataModel.xcdatamodeld in Sources */,
 				3D17E63F276EA031001D45C1 /* GroceriesListsDetailView.swift in Sources */,
 			);
