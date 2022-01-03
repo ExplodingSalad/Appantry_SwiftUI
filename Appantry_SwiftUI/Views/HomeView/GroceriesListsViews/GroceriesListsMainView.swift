@@ -10,6 +10,7 @@ import SwiftUI
 struct GroceriesListsMainView: View {
     
     @State private var searchText = ""
+    @State var isPopoverPresented = false
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(
         entity: GroceriesListEntity.entity(),
@@ -28,21 +29,17 @@ struct GroceriesListsMainView: View {
             .onDelete(perform: removeGroceriesList)
         }
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
-        .navigationBarTitle("Groceries Lists")
+        .navigationTitle("Groceries Lists")
         .toolbar {
-            Button(action: addList) {
+            Button(action: {
+                self.isPopoverPresented = true
+            }) {
                 Image(systemName: "plus")
             }
         }
-    }
-    
-    func addList() {
-        // TODO: Move logic
-        let test = GroceriesListEntity(context: managedObjectContext)
-        test.listName = "another list3"
-        test.id = UUID()
-        
-        PersistenceController.shared.save()
+        .popover(isPresented: $isPopoverPresented) {
+            AddListPopoverView()
+        }
     }
     
     func removeGroceriesList(at offsets: IndexSet) {

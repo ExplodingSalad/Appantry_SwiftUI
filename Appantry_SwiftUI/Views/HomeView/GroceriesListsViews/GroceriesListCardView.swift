@@ -15,12 +15,12 @@ struct GroceriesListCardView: View {
     var body: some View {
         ZStack {
             VStack(alignment: .leading, spacing: 5) {
-                Text(listItem.listName ?? "Unknown")
+                Text(listItem.wrappedListName)
                     .font(.title)
                     .bold()
                 HStack {
                     Image(systemName: K.ListIcons.productsNr)
-                    Text(String(listItem.products?.count ?? 0))
+                    Text("\(listItem.productArray.count)")
                         .font(.body)
                     
                     Spacer()

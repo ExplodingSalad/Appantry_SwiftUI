@@ -15,26 +15,32 @@ struct ProductCardView: View {
     var body: some View {
         ZStack {
             VStack(alignment: .leading, spacing: 5) {
-                Text(productItem.productName ?? "Unknown")
+                
+                //Name
+                Text(productItem.wrappedProductName)
                     .font(.title)
                     .bold()
+                
+                //Vendor
                 HStack {
                     Image(systemName: K.ProductIcons.vendor)
-                    Text(productItem.productVendor ?? "Unknown")
+                    Text(productItem.wrappedProductVendor)
                         .font(.body)
                     
                     Spacer()
                         .frame(width: 30, alignment: .leading)
                     
+                    //Category
                     Image(systemName: K.ProductIcons.category)
-                    Text(productItem.productCategory ?? "Unknown")
+                    Text(productItem.wrappedProductCategory)
                         .font(.body)
                     
                     Spacer()
                         .frame(width: 30, alignment: .leading)
                     
+                    //Quantity
                     Image(systemName: K.ProductIcons.quantity)
-                    Text("\(productItem.productStoredQuantity)")
+                    Text("\(productItem.wrappedStoredQuantity)")
                         .font(.body)
                     
                 }

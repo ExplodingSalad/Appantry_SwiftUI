@@ -10,13 +10,7 @@ import SwiftUI
 struct AddProductPopover: View {
     
     @Environment(\.presentationMode) var presentationMode
-    @Environment(\.managedObjectContext) var managedObjectContext
-    @State private var showAlert = false
-    @State private var number: Int = 0
-    @State var newProductName: String = ""
-    @State var newProductVendor: String = ""
-    @State var newProductCategory: String = ""
-    @State var newProductStoredQuantity: Int = 0
+    @StateObject var prodPopViewModel = AddProductPopoverViewModel()
     
     var body: some View {
         NavigationView {
@@ -25,21 +19,21 @@ struct AddProductPopover: View {
                     Label("", systemImage: K.ProductIcons.name)
                         .foregroundColor(.black)
                     Spacer().frame(maxWidth: .infinity)
-                    TextField("Add Name", text: $newProductName)
+                    TextField("Add Name", text: $prodPopViewModel.newProductName)
                         .keyboardType(.default)
                 }
                 HStack {
                     Label("", systemImage: K.ProductIcons.vendor)
                         .foregroundColor(.black)
                     Spacer().frame(maxWidth: .infinity)
-                    TextField("Add Vendor", text: $newProductVendor)
+                    TextField("Add Vendor", text: $prodPopViewModel.newProductVendor)
                         .keyboardType(.default)
                 }
                 HStack {
                     Label("", systemImage: K.ProductIcons.category)
                         .foregroundColor(.black)
                     Spacer().frame(maxWidth: .infinity)
-                    TextField("Add Category", text: $newProductCategory)
+                    TextField("Add Category", text: $prodPopViewModel.newProductCategory)
                         .keyboardType(.default)
                 }
                 VStack(alignment: .leading) {
@@ -47,11 +41,11 @@ struct AddProductPopover: View {
                         Label("", systemImage: K.ProductIcons.quantity)
                             .foregroundColor(.black)
                         Spacer().frame(maxWidth: .infinity)
-                        Text("\(number)")
+                        Text("\(prodPopViewModel.newProductStoredQuantity)")
                     }
                     HStack {
                         Spacer().frame(maxWidth: .infinity)
-                        Stepper("",value: $number, in: 0...100)
+                        Stepper("",value: $prodPopViewModel.newProductStoredQuantity, in: 0...100)
                     }
                 }
             }
@@ -59,28 +53,18 @@ struct AddProductPopover: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
+                        prodPopViewModel.saveProduct()
                         
-                        // if name is not nil saves the new product to CoreData
-                        if !newProductName.isEmpty {
-                            let newProduct = ProductEntity(context: managedObjectContext)
-                            newProduct.productName = newProductName
-                            newProduct.id = UUID()
-                            newProduct.productVendor = newProductVendor
-                            newProduct.productCategory = newProductCategory
-                            newProduct.productStoredQuantity = Int32(number)
-                            
-                            PersistenceController.shared.save()
-                            presentationMode.wrappedValue.dismiss()
-                        } else {
-                            showAlert = true
-                        }
+                        //TODO: fix alert dismiss bug
+                        // if saving fails due to an empty name, the dismissal is still called before the error is displayed
+                        presentationMode.wrappedValue.dismiss()
                     }
-                    .alert(isPresented: $showAlert) {
-                            Alert(
-                                title: Text("Product Name cannot be empty!"),
-                                message: Text("Please specify a name for your new Product.")
-                            )
-                        }
+                    .alert(isPresented: self.$prodPopViewModel.showAlert) {
+                        Alert(
+                            title: Text("Product Name cannot be empty!"),
+                            message: Text("Please specify a name for your new Product.")
+                        )
+                    }
                 }
                 ToolbarItem(placement: .principal) {
                     Text("Add Product")
@@ -94,8 +78,6 @@ struct AddProductPopover: View {
                 }
             }
         }
-        
-        
     }
 }
 

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct GroceriesListsDetailView: View {
-    //    let groceriesListsData: GroceriesListData
     
     @Environment(\.managedObjectContext) var managedObjectContext
     @ObservedObject var listItem: GroceriesListEntity
@@ -16,16 +15,24 @@ struct GroceriesListsDetailView: View {
     var body: some View {
         List {
             Section(header: Text("List Information")) {
-                Label("name", systemImage: "pencil")
-                    .font(.headline)
+                Label(listItem.wrappedListName, systemImage: K.ListIcons.name)
+                    .foregroundColor(.black)
+                Label("", systemImage: K.ListIcons.productsInStore)
+                    .foregroundColor(.black)
+                Label("", systemImage: K.ListIcons.productsOutStore)
+                    .foregroundColor(.black)
+                Label("", systemImage: K.ListIcons.productsNr)
+                    .foregroundColor(.black)
             }
-            
-            //            Section(header: Text("Products")) {
-            //                ForEach(listItem.products) { product in
-            //                    Label(product.productName, systemImage: "pencil")
-            //
-            //                }
-            //            }
+            Section(header: Text("Products on this List")) {
+                ForEach(listItem.productArray) {
+                    (fetchedProducts:ProductEntity) in
+                    NavigationLink(destination: ProductDetailView(productItem: fetchedProducts)) {
+                        ProductCardView(productItem: fetchedProducts)
+                        
+                    }
+                }
+            }
         }
     }
 }
