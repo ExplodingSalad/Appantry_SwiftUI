@@ -26,16 +26,16 @@ extension GroceriesListEntity {
 extension GroceriesListEntity {
 
     @objc(addProductsObject:)
-    @NSManaged public func addToProducts(_ value: ProductEntity)
+    @NSManaged public func addProductsToList(_ value: ProductEntity)
 
     @objc(removeProductsObject:)
-    @NSManaged public func removeFromProducts(_ value: ProductEntity)
+    @NSManaged public func removeProductFromList(_ value: ProductEntity)
 
     @objc(addProducts:)
-    @NSManaged public func addToProducts(_ values: NSSet)
+    @NSManaged public func addProductsToList(_ values: NSSet)
 
     @objc(removeProducts:)
-    @NSManaged public func removeFromProducts(_ values: NSSet)
+    @NSManaged public func removeProductFromList(_ values: NSSet)
 
 }
 

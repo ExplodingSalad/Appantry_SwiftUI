@@ -18,16 +18,13 @@ struct ProductsMainView: View {
             NSSortDescriptor(keyPath: \ProductEntity.productName, ascending: true)
         ]
     ) var fetchedProducts: FetchedResults<ProductEntity>
-    
-    @StateObject var prodMainViewModel = ProductsMainViewModel()
-    
+
     var body: some View {
         List {
             ForEach(fetchedProducts) {
                 (fetchedProducts:ProductEntity) in
                 NavigationLink(destination: ProductDetailView(productItem: fetchedProducts)) {
                     ProductCardView(productItem: fetchedProducts)
-                    
                 }
             }
             .onDelete(perform: removeProduct)
@@ -42,7 +39,6 @@ struct ProductsMainView: View {
             }
         }
         .popover(isPresented: $isPopoverPresented) {
-            
             AddProductPopover()
         }
     }

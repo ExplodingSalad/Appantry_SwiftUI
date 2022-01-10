@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct GroceriesListCardView: View {
-    
+
+    @EnvironmentObject var groceriesListViewModel: GroceriesListViewModel
     @Environment(\.managedObjectContext) var managedObjectContext
     @ObservedObject var listItem: GroceriesListEntity
     
@@ -16,7 +17,7 @@ struct GroceriesListCardView: View {
         ZStack {
             VStack(alignment: .leading, spacing: 5) {
                 Text(listItem.wrappedListName)
-                    .font(.title)
+                    .font(.title3)
                     .bold()
                 HStack {
                     Image(systemName: K.ListIcons.productsNr)
@@ -25,16 +26,16 @@ struct GroceriesListCardView: View {
                     
                     Spacer()
                         .frame(width: 30, alignment: .leading)
-                    //TODO: Add products in/out store logic
+
                     Image(systemName: K.ListIcons.productsInStore)
-                    Text("2")
+                    Text("\(listItem.productsInStore)")
                         .font(.body)
                     
                     Spacer()
                         .frame(width: 30, alignment: .leading)
                     
                     Image(systemName: K.ListIcons.productsOutStore)
-                    Text("0")
+                    Text("\(listItem.productsOutStore)")
                         .font(.body)
                 }
             }

@@ -16,5 +16,7 @@ extension Color {
         let col2 = Color("AppantryColor2")
         let col3 = Color("AppantryColor3")
         let col4 = Color("AppantryColor4")
+
+        let highlightedColor = Color(.red)
     }
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19A17053A0D3E4F8FF5BF299 /* ProductsSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A1775C2D4805A576849612 /* ProductsSelectionView.swift */; };
+		19A17189C0CC2D1B47846D12 /* GroceriesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A171FA82A3044C3FFBF576 /* GroceriesListViewModel.swift */; };
+		19A17ED37D4E0FB3F952A12A /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A171A8E9745019647FC1EB /* ProductViewModel.swift */; };
 		3D17E629276E9972001D45C1 /* Appantry_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17E628276E9972001D45C1 /* Appantry_SwiftUIApp.swift */; };
 		3D17E62B276E9972001D45C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D17E62A276E9972001D45C1 /* ContentView.swift */; };
 		3D17E62D276E9973001D45C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D17E62C276E9973001D45C1 /* Assets.xcassets */; };
@@ -22,10 +25,6 @@
 		3D79F3662773202D009EACD0 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F3652773202D009EACD0 /* PersistenceController.swift */; };
 		3D79F36D2775315F009EACD0 /* AddProductPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F36C2775315F009EACD0 /* AddProductPopover.swift */; };
 		3D79F36F277CD653009EACD0 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F36E277CD653009EACD0 /* K.swift */; };
-		3D79F37227823F00009EACD0 /* AddProductPopoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F37127823F00009EACD0 /* AddProductPopoverViewModel.swift */; };
-		3D79F37427824450009EACD0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F37327824450009EACD0 /* Model.swift */; };
-		3D79F37627824816009EACD0 /* ProductsMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F37527824816009EACD0 /* ProductsMainViewModel.swift */; };
-		3D79F37A27835B39009EACD0 /* AddListPopoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F37927835B39009EACD0 /* AddListPopoverViewModel.swift */; };
 		3D79F37C27835B56009EACD0 /* AddListPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F37B27835B56009EACD0 /* AddListPopoverView.swift */; };
 		3D79F38127836076009EACD0 /* ProductEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F37D27836076009EACD0 /* ProductEntity+CoreDataClass.swift */; };
 		3D79F38227836076009EACD0 /* ProductEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79F37E27836076009EACD0 /* ProductEntity+CoreDataProperties.swift */; };
@@ -39,6 +38,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19A171A8E9745019647FC1EB /* ProductViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		19A171FA82A3044C3FFBF576 /* GroceriesListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceriesListViewModel.swift; sourceTree = "<group>"; };
+		19A1775C2D4805A576849612 /* ProductsSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsSelectionView.swift; sourceTree = "<group>"; };
 		3D17E625276E9972001D45C1 /* Appantry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appantry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D17E628276E9972001D45C1 /* Appantry_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appantry_SwiftUIApp.swift; sourceTree = "<group>"; };
 		3D17E62A276E9972001D45C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,10 +57,6 @@
 		3D79F3652773202D009EACD0 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		3D79F36C2775315F009EACD0 /* AddProductPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductPopover.swift; sourceTree = "<group>"; };
 		3D79F36E277CD653009EACD0 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
-		3D79F37127823F00009EACD0 /* AddProductPopoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductPopoverViewModel.swift; sourceTree = "<group>"; };
-		3D79F37327824450009EACD0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		3D79F37527824816009EACD0 /* ProductsMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsMainViewModel.swift; sourceTree = "<group>"; };
-		3D79F37927835B39009EACD0 /* AddListPopoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListPopoverViewModel.swift; sourceTree = "<group>"; };
 		3D79F37B27835B56009EACD0 /* AddListPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListPopoverView.swift; sourceTree = "<group>"; };
 		3D79F37D27836076009EACD0 /* ProductEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ProductEntity+CoreDataClass.swift"; path = "Appantry_SwiftUI/Models/CoreData/ProductEntity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		3D79F37E27836076009EACD0 /* ProductEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ProductEntity+CoreDataProperties.swift"; path = "Appantry_SwiftUI/Models/CoreData/ProductEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
@@ -137,7 +135,6 @@
 				3D79F3642773201B009EACD0 /* CoreData */,
 				3D17E63A276E9AEE001D45C1 /* GroceriesListData.swift */,
 				3D17E649276FC287001D45C1 /* ProductData.swift */,
-				3D79F37327824450009EACD0 /* Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -149,6 +146,7 @@
 				3D17E63C276E9EA7001D45C1 /* GroceriesListCardView.swift */,
 				3D17E63E276EA031001D45C1 /* GroceriesListsDetailView.swift */,
 				3D79F37B27835B56009EACD0 /* AddListPopoverView.swift */,
+				19A1775C2D4805A576849612 /* ProductsSelectionView.swift */,
 			);
 			path = GroceriesListsViews;
 			sourceTree = "<group>";
@@ -191,27 +189,26 @@
 		3D79F36727734216009EACD0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				3D79F37827835A3C009EACD0 /* GroceriesListsViewModels */,
-				3D79F37727835A29009EACD0 /* ProductsListViewModels */,
+				3D79F37827835A3C009EACD0 /* GroceriesListViewModel */,
+				3D79F37727835A29009EACD0 /* ProductViewModel */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		3D79F37727835A29009EACD0 /* ProductsListViewModels */ = {
+		3D79F37727835A29009EACD0 /* ProductViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				3D79F37127823F00009EACD0 /* AddProductPopoverViewModel.swift */,
-				3D79F37527824816009EACD0 /* ProductsMainViewModel.swift */,
+				19A171A8E9745019647FC1EB /* ProductViewModel.swift */,
 			);
-			path = ProductsListViewModels;
+			path = ProductViewModel;
 			sourceTree = "<group>";
 		};
-		3D79F37827835A3C009EACD0 /* GroceriesListsViewModels */ = {
+		3D79F37827835A3C009EACD0 /* GroceriesListViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				3D79F37927835B39009EACD0 /* AddListPopoverViewModel.swift */,
+				19A171FA82A3044C3FFBF576 /* GroceriesListViewModel.swift */,
 			);
-			path = GroceriesListsViewModels;
+			path = GroceriesListViewModel;
 			sourceTree = "<group>";
 		};
 		3DFC793327726B2D00562380 /* Resources */ = {
@@ -251,8 +248,10 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = "";
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
+				ORGANIZATIONNAME = Zenyera;
 				TargetAttributes = {
 					3D17E624276E9972001D45C1 = {
 						CreatedOnToolsVersion = 13.2;
@@ -301,7 +300,6 @@
 				3D17E62B276E9972001D45C1 /* ContentView.swift in Sources */,
 				3D79F38227836076009EACD0 /* ProductEntity+CoreDataProperties.swift in Sources */,
 				3DFC792A276FDA7700562380 /* Colors.swift in Sources */,
-				3D79F37227823F00009EACD0 /* AddProductPopoverViewModel.swift in Sources */,
 				3D17E642276F444E001D45C1 /* HomeView.swift in Sources */,
 				3D79F38427836076009EACD0 /* GroceriesListEntity+CoreDataProperties.swift in Sources */,
 				3D17E64A276FC287001D45C1 /* ProductData.swift in Sources */,
@@ -315,14 +313,14 @@
 				3D79F3662773202D009EACD0 /* PersistenceController.swift in Sources */,
 				3DFC792C27725D0300562380 /* ProductsMainView.swift in Sources */,
 				3D79F36D2775315F009EACD0 /* AddProductPopover.swift in Sources */,
-				3D79F37427824450009EACD0 /* Model.swift in Sources */,
-				3D79F37627824816009EACD0 /* ProductsMainViewModel.swift in Sources */,
 				3DFC793027725D1F00562380 /* ProductDetailView.swift in Sources */,
-				3D79F37A27835B39009EACD0 /* AddListPopoverViewModel.swift in Sources */,
 				3D17E629276E9972001D45C1 /* Appantry_SwiftUIApp.swift in Sources */,
 				3D79F38127836076009EACD0 /* ProductEntity+CoreDataClass.swift in Sources */,
 				3D79F36327731FEB009EACD0 /* CoreDataModel.xcdatamodeld in Sources */,
 				3D17E63F276EA031001D45C1 /* GroceriesListsDetailView.swift in Sources */,
+				19A17053A0D3E4F8FF5BF299 /* ProductsSelectionView.swift in Sources */,
+				19A17189C0CC2D1B47846D12 /* GroceriesListViewModel.swift in Sources */,
+				19A17ED37D4E0FB3F952A12A /* ProductViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +396,9 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"\"-Xlinker -interposable\"",
+				);
 				PRODUCT_NAME = Appantry;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -454,6 +455,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+				);
 				PRODUCT_NAME = Appantry;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
