@@ -18,7 +18,7 @@ struct ProductCardView: View {
                 
                 //Name
                 Text(productItem.wrappedProductName)
-                    .font(.title)
+                    .font(.title3)
                     .bold()
                 
                 //Vendor

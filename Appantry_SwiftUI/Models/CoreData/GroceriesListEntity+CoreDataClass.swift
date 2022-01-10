@@ -22,6 +22,25 @@ public class GroceriesListEntity: NSManagedObject {
             $0.wrappedProductName < $1.wrappedProductName
         }
     }
-    
-    
+
+    public var productsInStore: Int {
+        var count = 0
+        for i in productArray {
+            if i.wrappedStoredQuantity > 0 {
+                count += 1
+            }
+        }
+        return count
+    }
+
+    public var productsOutStore: Int {
+        var count = 0
+        for i in productArray {
+            if i.wrappedStoredQuantity == 0 {
+                count += 1
+            }
+        }
+        return count
+    }
+
 }

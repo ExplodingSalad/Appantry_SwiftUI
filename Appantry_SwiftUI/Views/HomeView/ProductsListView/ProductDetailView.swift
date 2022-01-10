@@ -16,15 +16,15 @@ struct ProductDetailView: View {
         List {
             Section(header: Text("Product Information")) {
                 Label(productItem.wrappedProductName, systemImage: K.ProductIcons.name)
-                    .foregroundColor(.black)
+                        .foregroundColor(.black)
                 Label(productItem.wrappedProductVendor, systemImage: K.ProductIcons.vendor)
-                    .foregroundColor(.black)
+                        .foregroundColor(.black)
                 Label(productItem.wrappedProductCategory, systemImage: K.ProductIcons.category)
-                    .foregroundColor(.black)
+                        .foregroundColor(.black)
                 Label(String(productItem.wrappedStoredQuantity), systemImage: K.ProductIcons.quantity)
-                    .foregroundColor(.black)
+                        .foregroundColor(.black)
             }
-        }
+        }.navigationBarTitleDisplayMode(.inline)
     }
 }
 

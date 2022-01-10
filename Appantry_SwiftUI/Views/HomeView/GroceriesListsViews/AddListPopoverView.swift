@@ -3,35 +3,41 @@
 //  Appantry
 //
 //  Created by Jan Locher on 03.01.22.
+// This View requires a Navigation View, as it disposes of a ChildView that cannot be accessed otherwhise
 //
 
 import SwiftUI
 
 struct AddListPopoverView: View {
     @Environment(\.presentationMode) var presentationMode
-    @StateObject var listPopViewModel = AddListPopoverViewModel()
-    
+    @EnvironmentObject var groceriesListViewModel: GroceriesListViewModel
+    @State var isPopoverPresented = false
+
     var body: some View {
         NavigationView {
             List {
                 HStack {
                     Label("", systemImage: K.ProductIcons.name)
-                        .foregroundColor(.black)
+                            .foregroundColor(.black)
                     Spacer().frame(maxWidth: .infinity)
-                    TextField("Add Name", text: $listPopViewModel.newListName)
-                        .keyboardType(.default)
+                    TextField("Add Name", text: $groceriesListViewModel.newListName)
+                            .keyboardType(.default)
+                }
+                NavigationLink(destination: ProductsSelectionView()) {
+                    Label("Select Products", systemImage: K.ListIcons.productsNr)
+                            .foregroundColor(.black)
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
-                        listPopViewModel.saveList()
-                        
+                        groceriesListViewModel.saveList()
                         // if saving fails due to an empty name, the dismissal is still called before the error is displayed
                         presentationMode.wrappedValue.dismiss()
+//                        groceriesListViewModel.resetFieldValues()
                     }
-                    .alert(isPresented: self.$listPopViewModel.showAlert) {
+                    .alert(isPresented: $groceriesListViewModel.showAlert) {
                         Alert(
                             title: Text("List Name cannot be empty!"),
                             message: Text("Please specify a name for your new List.")
@@ -44,7 +50,7 @@ struct AddListPopoverView: View {
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Cancel") {
-                        // TODO: Back logic (?)
+                        groceriesListViewModel.resetFieldValues()
                         presentationMode.wrappedValue.dismiss()
                     }
                 }
